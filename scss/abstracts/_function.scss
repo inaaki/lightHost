@@ -1,0 +1,13 @@
+//total height or width function
+@function sum($padding,$fontsize){
+   @return $padding*2+$fontsize;
+ }
+
+ //function and mixin for font color
+@function color($bg) {
+   @if (lightness($bg) > 50) {
+     @return $primaryColor;
+   } @else {
+     @return white;
+   }
+ }

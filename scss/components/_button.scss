@@ -1,0 +1,33 @@
+.btn {
+   display: block;
+   appearance: none;
+   padding: 2.2rem 4rem;
+   outline: 0;
+   border: 0;
+   font-size: 1.8rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   text-align: center;
+   border-radius: 40px;
+ }
+ @include responsive-element {
+   .btn {
+     font-size: 1.5rem;
+     padding: 2.4rem 4rem;
+   }
+ }
+ 
+ //btn skin
+ .btn--primary {
+   @include dynamicColor($primaryColor);
+ }
+ .btn--accent {
+   @include dynamicColor($assetColor_1);
+ }
+ .btn--light {
+   @include dynamicColor(white);
+   border: 2px solid $primaryColor;
+ }
+ .btn--callout {
+   @include dynamicColor($secondaryColor);
+ }

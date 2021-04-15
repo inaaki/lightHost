@@ -1,0 +1,48 @@
+@use 'function' as fun; //importing all the functions
+
+//border for debugging
+@mixin test {
+  border: 1px solid red;
+}
+//border for dubugging
+
+//font mixin
+@mixin font-primary {
+  font-family: $primaryFont;
+}
+@mixin font-secondary {
+  font-family: $secondaryFont;
+}
+
+//responsive mixin
+@mixin responsive-element {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin responsive-font {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+//placing elements center
+@mixin center {
+  display: inline-grid;
+  place-items: center;
+}
+
+//sizing elements in squre
+@mixin square-size($size) {
+  height: $size;
+  width: $size;
+}
+//light transition
+@mixin basic-transition {
+  transition: transform 250ms ease-in-out;
+}
+//color based on background color
+@mixin dynamicColor($color) {
+  background-color: $color;
+  color: fun.color($color);
+}

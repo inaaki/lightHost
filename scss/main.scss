@@ -1,0 +1,150 @@
+@import "normalise";
+@import "reset";
+@import "variable";
+@import "mix&fun";
+
+body {
+  @include font-primary;
+  font-size: $mobileBody;
+  line-height: 1.5;
+}
+
+@include responsive-font {
+  body {
+    font-size: $desktopBody;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: $primaryColor;
+}
+//adding sizes to headings
+@each $name, $size in $mobileHeadings {
+  #{$name} {
+    font-size: $size;
+  }
+}
+@include responsive-font {
+  @each $name, $size in $desktopHeadings {
+    #{$name} {
+      font-size: $size;
+    }
+  }
+}
+
+@import '/scss/components'
+
+// // icons
+// .icon-container {
+//   @include square-size(8rem);
+//   border-radius: 50%;
+//   @include center;
+//   background-color: $icon-containerColor;
+// }
+
+// .icon {
+//   @include square-size(5rem);
+// }
+
+// .icon--primary {
+//   fill: $primaryColor;
+// }
+
+// @include responsive-element {
+//   .icon-container {
+//     @include square-size(6.5rem);
+//   }
+
+//   .icon {
+//     @include square-size(4rem);
+//   }
+// }
+
+// //links
+// .link-arrow {
+//   color: $assetColor_1;
+//   text-transform: uppercase;
+//   font-size: 2rem;
+//   font-weight: 700;
+//   &:hover::after {
+//     margin-left: 10px;
+//   }
+// }
+
+// .link-arrow::after {
+//   content: "-->";
+//   margin-left: 5px;
+//   @include basic-transition;
+// }
+
+// @include responsive-font {
+//   .link-arrow {
+//     font-size: 1.5rem;
+//   }
+//   .link::after {
+//     margin-left: 8px;
+//   }
+// }
+
+// //btn
+// .btn {
+//   display: block;
+//   appearance: none;
+//   padding: 2.2rem 4rem;
+//   outline: 0;
+//   border: 0;
+//   font-size: 1.8rem;
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   text-align: center;
+//   border-radius: 40px;
+// }
+// @include responsive-element {
+//   .btn {
+//     font-size: 1.5rem;
+//     padding: 2.4rem 4rem;
+//   }
+// }
+
+// //btn skin
+// .btn--primary {
+//   @include dynamicColor($primaryColor);
+// }
+// .btn--accent {
+//   @include dynamicColor($assetColor_1);
+// }
+// .btn--light {
+//   @include dynamicColor(white);
+//   border: 2px solid $primaryColor;
+// }
+// .btn--callout {
+//   @include dynamicColor($secondaryColor);
+// }
+
+// //list
+// .list {
+//   color: $primaryColor;
+// }
+// .list--inline .list__item{
+//   display: inline-block;
+//   margin: 0 2rem;
+// }
+// .list--tick {
+//   list-style: square outside url(/assets/icon/tick.svg);
+//   padding-left: 3rem;
+// }
+// .list--tick .list__item {
+//   padding-left: 1rem;
+//   margin: 2rem 0;
+//   font-weight: 600;
+//   letter-spacing: 1px;
+// }
+// @include responsive-font {
+//   .list--tick .list__item {
+//     padding-left: 0.5rem;
+//   }
+// }

@@ -1,0 +1,24 @@
+.icon-container {
+   @include square-size(8rem);
+   border-radius: 50%;
+   @include center;
+   background-color: $icon-containerColor;
+ }
+ 
+ .icon {
+   @include square-size(5rem);
+ }
+ 
+ .icon--primary {
+   fill: $primaryColor;
+ }
+ 
+ @include responsive-element {
+   .icon-container {
+     @include square-size(6.5rem);
+   }
+ 
+   .icon {
+     @include square-size(4rem);
+   }
+ }
