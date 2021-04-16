@@ -1,0 +1,12 @@
+//responsive breakpoints
+$breakpoints: (
+  "medium": (
+    min-width: 768px,
+  ),
+  "large": (
+    min-width: 1024px,
+  ),
+);
+
+//maximum width of container
+$max-width: 1040px;

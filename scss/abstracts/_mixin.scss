@@ -1,4 +1,5 @@
-@use 'function' as fun; //importing all the functions
+@use './function' as fun;
+@use './variables/extras' as ex;
 
 //border for debugging
 @mixin test {
@@ -6,23 +7,23 @@
 }
 //border for dubugging
 
-//font mixin
-@mixin font-primary {
-  font-family: $primaryFont;
-}
-@mixin font-secondary {
-  font-family: $secondaryFont;
-}
-
 //responsive mixin
-@mixin responsive-element {
-  @media only screen and (min-width: 769px) {
-    @content;
-  }
-}
-@mixin responsive-font {
-  @media only screen and (min-width: 1024px) {
-    @content;
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get(ex.$breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
 
@@ -45,4 +46,8 @@
 @mixin dynamicColor($color) {
   background-color: $color;
   color: fun.color($color);
+}
+// mixin for font adding 
+@mixin font($font){
+  font-family: $font;
 }

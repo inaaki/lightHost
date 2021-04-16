@@ -1,22 +1,25 @@
+@use "../abstracts/abstracts-dir" as *;
+
+
 .list {
-   color: $primaryColor;
- }
- .list--inline .list__item{
-   display: inline-block;
-   margin: 0 2rem;
- }
- .list--tick {
-   list-style: square outside url(/assets/icon/tick.svg);
-   padding-left: 3rem;
- }
- .list--tick .list__item {
-   padding-left: 1rem;
-   margin: 2rem 0;
-   font-weight: 600;
-   letter-spacing: 1px;
- }
- @include responsive-font {
-   .list--tick .list__item {
-     padding-left: 0.5rem;
-   }
- }
+  color: $primaryColor;
+}
+.list--inline .list__item {
+  display: inline-block;
+  margin: 0 2rem;
+}
+.list--tick {
+  list-style: square outside url(/assets/icon/tick.svg);
+  padding-left: 3rem;
+}
+.list--tick .list__item {
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+@include respond-to('large'){
+  .list--tick .list__item {
+    padding-left: 0.5rem;
+  }
+}

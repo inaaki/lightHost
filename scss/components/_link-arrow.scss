@@ -1,24 +1,27 @@
+@use "../abstracts/abstracts-dir" as *;
+
+
 .link-arrow {
-   color: $assetColor_1;
-   text-transform: uppercase;
-   font-size: 2rem;
-   font-weight: 700;
-   &:hover::after {
-     margin-left: 10px;
-   }
- }
- 
- .link-arrow::after {
-   content: "-->";
-   margin-left: 5px;
-   @include basic-transition;
- }
- 
- @include responsive-font {
-   .link-arrow {
-     font-size: 1.5rem;
-   }
-   .link::after {
-     margin-left: 8px;
-   }
- } 
+  color: $assetColor_1;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  &:hover::after {
+    margin-left: 10px;
+  }
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  @include basic-transition;
+}
+
+@include respond-to('large'){
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+  .link::after {
+    margin-left: 8px;
+  }
+}
