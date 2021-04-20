@@ -6,7 +6,7 @@
 
  //function and mixin for font color
 @function color($bg) {
-   @if (lightness($bg) > 50) {
+   @if (lightness($bg) > 60) {
      @return c.$primaryColor;
    } @else {
      @return white;
