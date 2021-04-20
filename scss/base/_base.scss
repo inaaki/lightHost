@@ -4,6 +4,7 @@ body {
   @include font($inter);
   font-size: $mobileBody;
   line-height: 1.5;
+  padding-left: 10px;//for debugging purpose
 }
 
 @include respond-to("large") {

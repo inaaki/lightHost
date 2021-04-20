@@ -1,0 +1,41 @@
+@use '../abstracts/abstracts-dir' as *;
+
+.input {
+  @include semi-roundBorder(2rem);
+  border: 1px solid $bodyColor;
+  color: $primaryColor;
+  font-size: 2rem;
+  min-width: 0;
+  padding: 1.5rem 3.5rem;
+}
+@include respond-to("large") {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+::placeholder {
+  color: $placeholder;
+}
+
+.input-group {
+  border: 1px solid $bodyColor;
+  @include semi-roundBorder(4rem);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex: auto;
+}
+
+.input-group .btn {
+  margin: 4px;
+  @include center;
+}
+
+.input-group .icon {
+  @include square-size(2.5rem);
+  margin-right: 1rem;
+  margin-left: -1rem;
+}
