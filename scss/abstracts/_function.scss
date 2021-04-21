@@ -1,14 +1,24 @@
 @use './variables/colors' as c;
 //total height or width function
-@function sum($padding,$fontsize){
-   @return $padding*2+$fontsize;
- }
+@function sum($padding, $fontsize) {
+  @return $padding * 2 + $fontsize;
+}
 
- //function and mixin for font color
+//function with mixin for dynamic font color
 @function color($bg) {
-   @if (lightness($bg) > 60) {
-     @return c.$primaryColor;
-   } @else {
-     @return white;
-   }
- }
+  @if (lightness($bg) >= 60) {
+    @return c.$primaryColor;
+  } @else {
+    @return white;
+  }
+}
+
+//lighting color by %
+@function light($color) {
+  @return (scale-color($color, $lightness: 10%));
+}
+
+//darkening color by %
+@function dark($color) {
+  @return (scale-color($color, $blackness: 10%));
+}
