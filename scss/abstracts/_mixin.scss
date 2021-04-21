@@ -13,7 +13,7 @@
 
   @if $raw-query {
     $query: if(
-      type-of($raw-query) == 'string',
+      type-of($raw-query) == "string",
       unquote($raw-query),
       inspect($raw-query)
     );
@@ -40,20 +40,31 @@
   width: $size;
 }
 //light transition
-@mixin basic-transition {
-  transition: transform 250ms ease-in-out;
+@mixin basic-transition($var: all) {
+  transition: $var 200ms ease 50ms;
 }
 //color based on background color
 @mixin dynamicColor($color) {
   background-color: $color;
   color: fun.color($color);
 }
-// mixin for font adding 
-@mixin font($font){
+// mixin for font adding
+@mixin font($font) {
   font-family: $font;
 }
 
 //semi round dynamic border
-@mixin semi-roundBorder($var){
-  border-radius: $var*2;
+@mixin semi-roundBorder($var) {
+  border-radius: $var * 2;
+}
+
+//on hover effect
+@mixin onhover($color) {
+  &:hover {
+    @if (lightness($color) > 40) {
+      background-color: (fun.dark($color));
+    } @else {
+      background-color: (fun.light($color));
+    }
+  }
 }
