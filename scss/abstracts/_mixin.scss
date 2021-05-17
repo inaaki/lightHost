@@ -68,3 +68,17 @@
     }
   }
 }
+
+// Box shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;       
+          box-shadow: $shadow;
+}
+@mixin test-shadow($color){
+  box-shadow:
+0 120px 0 $eggshell, 120px 0 0 $eggshell,
+80px 40px 0 $eggshell, 0 80px 0 $eggshell,
+80px 0 0 $eggshell, 40px 80px 0 $eggshell,
+40px 40px 0 $eggshell, 0 40px 0 $eggshell, 40px 0 0 $eggshell;
+}

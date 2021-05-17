@@ -6,13 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/dist/css/main.css" />
     <title>Creating Components</title>
   </head>
   <body>
-    
+    <div class="plan plan--popular">
+      <div class="card card--secondary">
+        <div class="card__header">
+          <h3 class="plan__name">Entry</h3>
+          <span class="plan__price">$14</span>
+          <span class="plan__bill-cycle">/month</span>
+          <span class="badge badge--secondary badge--small">10% off</span>
+          <span class="plan__description">Easy start on the cloud</span>
+        </div>
+        <div class="card__body">
+          <ul class="list list--tick">
+            <li class="list__item">Unlimited Websites</li>
+            <li class="list__item">Unlimited Bandwidth</li>
+            <li class="list__item">100 GB SSD Storage</li>
+            <li class="list__item">3 GB RAM</li>
+            <li class="list__item">2 CPU Cores</li>
+          </ul>
+          <button class="btn btn--primary btn--block">get started</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

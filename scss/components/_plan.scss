@@ -1,0 +1,45 @@
+@use '../abstracts/abstracts-dir' as *;
+.plan__name {
+  color: white;
+  font-size: 2.4rem;
+  font-weight:500;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+}
+.plan__price {
+  font-size: 6rem;
+  line-height: 1;
+}
+.plan__bill-cycle {
+  font-size: 2.4rem;
+  margin-right: 1rem;
+  opacity: 0.8;
+}
+.plan__description {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.plan--popular .card__header{
+  position: relative;
+}
+.plan--popular .card__header::before{
+  content:url('../../assets/icon/sprite.svg#');
+}
+
+@include respond-to("large") {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+  .plan__price {
+    font-size: 5rem;
+  }
+  .plan__bill-cycle {
+    font-size: 1.6rem;
+  }
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}

@@ -6,21 +6,23 @@
   display: inline-block;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
+  white-space: nowrap;
 }
-.badge--small{
-   font-size: 1.6rem;
+.badge--small {
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
-@include respond-to('large'){
-   .badge{
-      font-size: 1.5rem;
-   }
-   .badge--small{
-      font-size: 1.2rem;
-   }
+@include respond-to("large") {
+  .badge {
+    font-size: 1.5rem;
+  }
+  .badge--small {
+    font-size: 1.2rem;
+  }
 }
 .badge--primary {
   @include dynamicColor($secondaryColor);
 }
 .badge--secondary {
-  @include dynamicColor (scale-color($assetColor_2,$blackness: 20% ));
+  @include dynamicColor($assetColor_2);
 }
