@@ -1,0 +1,12 @@
+@use '../abstracts/abstracts-dir' as *;
+
+.media{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.media__image{
+  margin-top: 1rem;
+}
+.media__body{
+  margin: 0 2rem;
+}

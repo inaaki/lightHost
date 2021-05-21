@@ -15,6 +15,9 @@
 .icon--primary {
   fill: $primaryColor;
 }
+.icon--secondary{
+  fill: $assetColor_2;
+}
 
 @include respond-to('large'){
   .icon-container {
