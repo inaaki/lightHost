@@ -1,31 +1,31 @@
 @use '../abstracts/abstracts-dir' as *;
 
 .card {
-  box-shadow: 0 0 20px 10px $shadow;
-  border-radius: 7px;
-  overflow: hidden;
-  margin: 2rem 1rem;
+   box-shadow: 0 0 20px 10px $shadow;
+   border-radius: 7px;
+   margin: 2rem 1rem;
 }
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+   border-radius: 7px 7px 0 0;
+   padding: 2rem 3rem;
 }
 .card--primary .card__header {
-  @include dynamicColor($secondaryColor);
+   @include dynamicColor($secondaryColor);
 }
 .card--secondary .card__header {
-  @include dynamicColor($assetColor_2);
+   @include dynamicColor($assetColor_2);
 }
 
 //badge inside plans
 .card--primary .badge--primary {
-  background-color: scale-color($secondaryColor, $blackness: 5%);
+   background-color: scale-color($secondaryColor, $blackness: 5%);
 }
 .card--secondary .badge--secondary {
-  background-color: scale-color($assetColor_2, $blackness: 10%);
+   background-color: scale-color($assetColor_2, $blackness: 10%);
 }
 
 //button inside card
-.card__body .btn{
-  margin-top: 2rem;
+.card__body .btn {
+   margin-top: 2rem;
 }
