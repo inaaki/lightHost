@@ -1,15 +1,15 @@
 @use './function' as fun;
-@use './variables/extras' as ex;
+@use './variables/width' as width;
 
 //border for debugging
 @mixin test {
   border: 1px solid red;
 }
-//border for dubugging
+//border for debugging
 
 //responsive mixin
 @mixin respond-to($breakpoint) {
-  $raw-query: map-get(ex.$breakpoints, $breakpoint);
+  $raw-query: map-get(width.$breakpoints, $breakpoint);
 
   @if $raw-query {
     $query: if(
